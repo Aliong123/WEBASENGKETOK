@@ -1,0 +1,21 @@
+{
+  "name": "bengkel-aseng-ketok",
+  "version": "1.0.0",
+  "description": "Professional Auto Service Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "auto service",
+    "bengkel",
+    "car repair"
+  ],
+  "author": "Marvin Ber",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^5.0.0"
+  }
+} 
