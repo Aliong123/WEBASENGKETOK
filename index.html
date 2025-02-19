@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengkel Aseng Ketok - Professional Auto Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-main">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo-removebg-preview.png.png" alt="Logo Bengkel" class="logo-img">
+                    <h1>Bengkel Aseng Ketok</h1>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-main">
+                    <ul>
+                        <li><a href="index.html" class="active">Beranda</a></li>
+                        <li><a href="layanan.html">Layanan</a></li>
+                        <li><a href="tentang.html">Tentang</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                        <li><a href="https://wa.me/6282246786617?text=Halo%20Bengkel%20Aseng%20Ketok%2C%20saya%20ingin%20booking%20servis." class="btn-booking">Booking Sekarang</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Servis Mobilmu dengan <span class="highlight">Harga Pas</span>, Kualitas Premium!</h2>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Garansi 6 Bulan</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-certificate"></i>
+                        <span>Teknisi Bersertifikat</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-comments"></i>
+                        <span>Free Konsultasi</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://wa.me/6282246786617?text=Halo%20Bengkel%20Aseng%20Ketok%2C%20saya%20ingin%20booking%20servis." class="btn-cta">Pesan Sekarang</a>
+                    <a href="layanan.html" class="btn-secondary">Lihat Layanan</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/logo index.jpg" alt="Professional Auto Service" class="hero-img" style="border-radius: 15px;">
+                <div class="experience-badge">
+                    <span class="years">10+</span>
+                    <span class="text">Tahun<br>Pengalaman</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Layanan Kami</span>
+                <h2 class="section-title">Solusi Lengkap untuk Perawatan Kendaraan Anda</h2>
+            </div>
+
+            <div class="services-categories">
+                <button class="category-btn active" data-category="all">Semua Layanan</button>
+                <button class="category-btn" data-category="body">Body & Cat</button>
+                <button class="category-btn" data-category="mesin">Mesin</button>
+                <button class="category-btn" data-category="ac">AC & Interior</button>
+            </div>
+
+            <div class="services-grid">
+                <!-- Ketok Magic -->
+                <div class="service-card" data-category="body">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Ketok Magic</h3>
+                    <p>Perbaikan body mobil tanpa perlu pengecatan ulang. Ideal untuk kerusakan ringan seperti penyok dan lecet.</p>
+                    <a href="https://wa.me/6282246786617?text=Halo%20Bengkel%20Aseng%20Ketok%2C%20saya%20ingin%20booking%20servis%20Ketok%20Magic." class="btn-service">Booking Sekarang</a>
+                </div>
+
+                <!-- Las -->
+                <div class="service-card" data-category="body">
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Las</h3>
+                    <p>Perbaikan struktur body mobil dengan pengelasan presisi tinggi untuk kerusakan yang memerlukan penyambungan atau penguatan.</p>
+                    <a href="https://wa.me/6282246786617?text=Halo%20Bengkel%20Aseng%20Ketok%2C%20saya%20ingin%20booking%20servis%20Las." class="btn-service">Booking Sekarang</a>
+                </div>
+
+                <!-- Cat -->
+                <div class="service-card" data-category="body">
+                    <div class="service-icon">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <h3>Cat</h3>
+                    <p>Pengecatan mobil profesional dengan hasil yang halus dan tahan lama, tersedia berbagai pilihan warna dan jenis cat.</p>
+                    <a href="https://wa.me/6282246786617?text=Halo%20Bengkel%20Aseng%20Ketok%2C%20saya%20ingin%20booking%20servis%20Pengecatan." class="btn-service">Booking Sekarang</a>
+                </div>
+
+                <!-- Salon Body -->
+                <div class="service-card" data-category="body">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Salon Body</h3>
+                    <p>Perawatan menyeluruh untuk eksterior mobil, termasuk poles, wax, dan pembersihan mendalam untuk tampilan maksimal.</p>
+                    <a href="https://wa.me/6282246786617?text=Halo%20Bengkel%20Aseng%20Ketok%2C%20saya%20ingin%20booking%20servis%20Salon%20Body." class="btn-service">Booking Sekarang</a>
+                </div>
+
+                <!-- Coating -->
+                <div class="service-card" data-category="body">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Coating</h3>
+                    <p>Perlindungan cat mobil premium dengan teknologi nano-coating untuk ketahanan maksimal terhadap cuaca dan goresan.</p>
+                    <a href="https://wa.me/6282246786617?text=Halo%20Bengkel%20Aseng%20Ketok%2C%20saya%20ingin%20booking%20servis%20Coating." class="btn-service">Booking Sekarang</a>
+                </div>
+
+                <!-- Mesin dan Kaki Mobil -->
+                <div class="service-card" data-category="mesin">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Mesin dan Kaki Mobil</h3>
+                    <p>Perbaikan dan perawatan komprehensif untuk mesin dan sistem suspensi mobil Anda.</p>
+                    <a href="https://wa.me/6282246786617?text=Halo%20Bengkel%20Aseng%20Ketok%2C%20saya%20ingin%20booking%20servis%20Mesin%20dan%20Kaki%20Mobil." class="btn-service">Booking Sekarang</a>
+                </div>
+
+                <!-- AC -->
+                <div class="service-card" data-category="ac">
+                    <div class="service-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>AC</h3>
+                    <p>Servis dan perbaikan sistem AC mobil untuk kenyamanan berkendara optimal dalam segala cuaca.</p>
+                    <a href="https://wa.me/6282246786617?text=Halo%20Bengkel%20Aseng%20Ketok%2C%20saya%20ingin%20booking%20servis%20AC." class="btn-service">Booking Sekarang</a>
+                </div>
+
+                <!-- Kaca Film -->
+                <div class="service-card" data-category="ac">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Kaca Film</h3>
+                    <p>Pemasangan kaca film berkualitas tinggi untuk perlindungan UV dan privasi maksimal.</p>
+                    <a href="https://wa.me/6282246786617?text=Halo%20Bengkel%20Aseng%20Ketok%2C%20saya%20ingin%20booking%20servis%20Kaca%20Film." class="btn-service">Booking Sekarang</a>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="layanan.html" class="btn-primary">Lihat Semua Layanan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Mengapa Memilih Kami</span>
+                <h2 class="section-title">Bengkel Terpercaya dengan Layanan Terbaik</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Teknisi Ahli</h3>
+                    <p>Tim teknisi berpengalaman dan bersertifikat</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Tepat Waktu</h3>
+                    <p>Pengerjaan sesuai estimasi yang dijanjikan</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Kualitas Terjamin</h3>
+                    <p>Garansi untuk setiap layanan yang kami berikan</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Harga Transparan</h3>
+                    <p>Biaya jelas tanpa biaya tersembunyi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <img src="images/logo.png" alt="Logo Bengkel" class="footer-logo">
+                    <p>Bengkel Aseng Ketok - Solusi terpercaya untuk perawatan dan perbaikan kendaraan Anda.</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Hubungi Kami</h3>
+                    <p><i class="fas fa-phone"></i> +62 82246786617</p>
+                    <p><i class="fas fa-map-marker-alt"></i> JL. Tuamang No.2B, Medan</p>
+                </div>
+                <div class="footer-hours">
+                    <h3>Jam Operasional</h3>
+                    <p>Senin-Sabtu: 8.30 - 17.30</p>
+                    <p>Minggu: Tutup</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Ikuti Kami</h3>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@asengmagic"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/aseng_ketok/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6282246786617"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/@Aseng-Ketok/shorts"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bengkel Aseng Ketok. By Marvin Ber.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
