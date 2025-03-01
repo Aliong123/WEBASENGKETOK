@@ -1,25 +1,12 @@
 {
-  "name": "bengkel-aseng",
+  "name": "web-bengkel",
   "version": "1.0.0",
-  "description": "Bengkel Aseng Ketok Website",
-  "main": "api/index.js",
+  "description": "Bengkel website",
   "scripts": {
-    "start": "node api/index.js",
-    "dev": "nodemon api/index.js"
+    "start": "serve",
+    "build": "echo 'No build required'"
   },
-  "keywords": [
-    "auto service",
-    "bengkel",
-    "car repair"
-  ],
-  "author": "Marvin Ber",
-  "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.3"
+    "serve": "^14.0.0"
   }
 } 
