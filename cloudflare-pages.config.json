@@ -1,6 +1,6 @@
 {
   "build": {
-    "command": "npm install && echo 'Static site - no build required'",
+    "command": "npm install && npm run build",
     "output_directory": ".",
     "environment": {
       "NODE_VERSION": "18"
