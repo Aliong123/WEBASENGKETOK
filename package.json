@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Bengkel website",
   "scripts": {
-    "start": "serve",
-    "build": "echo 'Static site, no build required'"
-  },
-  "dependencies": {
-    "serve": "^14.0.0"
+    "start": "echo 'This is a static site'",
+    "build": "exit 0"
   }
 } 
