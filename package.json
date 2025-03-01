@@ -4,7 +4,7 @@
   "description": "Bengkel website",
   "scripts": {
     "start": "serve",
-    "build": "echo 'No build required'"
+    "build": "echo 'Static site, no build required'"
   },
   "dependencies": {
     "serve": "^14.0.0"
