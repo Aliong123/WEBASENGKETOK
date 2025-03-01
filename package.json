@@ -1,12 +1,11 @@
 {
-  "name": "bengkel-aseng-ketok",
+  "name": "bengkel-aseng",
   "version": "1.0.0",
-  "description": "Professional Auto Service Website",
-  "main": "index.html",
+  "description": "Bengkel Aseng Ketok Website",
+  "main": "api/index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js"
   },
   "keywords": [
     "auto service",
@@ -16,6 +15,11 @@
   "author": "Marvin Ber",
   "license": "ISC",
   "dependencies": {
-    "vite": "^5.0.0"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
 } 

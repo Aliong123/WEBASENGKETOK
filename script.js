@@ -821,3 +821,50 @@ document.addEventListener('DOMContentLoaded', function() {
         autoSlideInterval = setInterval(slideNext, 3000);
     });
 });
+
+// Main JavaScript for Bengkel Aseng Ketok website
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMain = document.querySelector('.nav-main');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navMain.classList.toggle('active');
+        });
+    }
+    
+    // Check if auth.js is loaded
+    if (typeof updateNavigation === 'function') {
+        // Update navigation based on login status
+        updateNavigation();
+    }
+    
+    // Add click event listener to all links with class 'btn-booking'
+    const bookingButtons = document.querySelectorAll('.btn-booking');
+    bookingButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Check if it's not already a WhatsApp link
+            if (!this.href.includes('wa.me')) {
+                e.preventDefault();
+                window.location.href = 'booking.html';
+            }
+        });
+    });
+});
+
+// Load auth.js if it hasn't been loaded already
+if (typeof isLoggedIn !== 'function') {
+    const script = document.createElement('script');
+    script.src = 'auth.js';
+    script.async = true;
+    script.onload = function() {
+        // Update navigation after auth.js is loaded
+        if (typeof updateNavigation === 'function') {
+            updateNavigation();
+        }
+    };
+    document.head.appendChild(script);
+}

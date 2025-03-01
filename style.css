@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-.nav-main a:not(.btn-booking)::after {
+.nav-main a:not(.btn-booking):not(.btn-login)::after {
     content: '';
     position: absolute;
     bottom: -4px;
@@ -136,8 +136,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition-normal);
 }
 
-.nav-main a:hover::after,
-.nav-main a.active::after {
+.nav-main a:not(.btn-booking):not(.btn-login):hover::after,
+.nav-main a.active:not(.btn-booking):not(.btn-login)::after {
     width: 100%;
 }
 
@@ -171,53 +171,60 @@ h1, h2, h3, h4, h5, h6 {
     .nav-main {
         position: fixed;
         top: 0;
-        right: -100%;
+        left: -100%;
         width: 80%;
-        max-width: 400px;
         height: 100vh;
-        background: var(--color-background);
-        padding: 8rem 2rem 2rem;
-        transition: all 0.3s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        z-index: 999;
+        background-color: white;
+        z-index: 100;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        padding: 2rem;
         overflow-y: auto;
     }
 
     .nav-main.active {
-        right: 0;
+        left: 0;
     }
 
     .nav-main ul {
         flex-direction: column;
         align-items: flex-start;
-        gap: 2rem;
     }
 
     .menu-toggle.active span:first-child {
-        transform: translateY(9px) rotate(45deg);
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
     .menu-toggle.active span:nth-child(2) {
         opacity: 0;
-        transform: translateX(-20px);
     }
-
+    
     .menu-toggle.active span:last-child {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     body.menu-open {
         overflow: hidden;
     }
-
+    
     .nav-main ul li {
         width: 100%;
+        margin: 0.5rem 0;
     }
-
+    
     .nav-main ul li a {
         display: block;
-        padding: 1rem 0;
+        padding: 0.8rem 0;
+        font-size: 1.6rem;
+    }
+    
+    .btn-booking,
+    .btn-login {
+        padding: 1rem 1.5rem;
+        text-align: center;
         width: 100%;
+        margin-left: 0 !important;
+        margin-top: 0.5rem;
     }
 }
 
@@ -240,6 +247,23 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-primary-dark);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 107, 53, 0.35);
+}
+
+.btn-login {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    font-weight: 600;
+    color: #fff;
+    background: #3498db;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: var(--transition-normal);
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.25);
+    margin-left: 1rem;
+}
+
+.btn-login:hover {
+    background: #2980b9;
 }
 
 .btn-secondary {
@@ -2281,4 +2305,73 @@ textarea.form-control {
     .pricing-note li {
         font-size: 1.3rem;
     }
+}
+
+/* Mobile navigation button fixes */
+@media (max-width: 768px) {
+    .nav-main .btn-booking,
+    .nav-main .btn-login {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 0.8rem;
+        padding: 1.2rem 1rem;
+        min-width: 160px;
+        white-space: normal;
+        word-break: break-word;
+    }
+    
+    .nav-main ul li:last-child,
+    .nav-main ul li:nth-last-child(2) {
+        width: 100%;
+        display: block;
+    }
+    
+    .nav-main ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra styling for very small screens */
+@media (max-width: 480px) {
+    .nav-main .btn-booking,
+    .nav-main .btn-login {
+        font-size: 1.4rem;
+        padding: 1rem 0.8rem;
+        height: auto;
+        min-height: 44px; /* Maintain minimum touch target size */
+    }
+}
+
+/* Deposit options styles */
+.deposit-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.deposit-option {
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2d3748;
+    background-color: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.deposit-option:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+.deposit-option:active {
+    transform: scale(0.98);
 }
