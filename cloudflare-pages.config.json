@@ -1,6 +1,6 @@
 {
   "build": {
-    "command": "npm install && npm run build",
+    "command": "npm i --no-package-lock && npm run build",
     "output_directory": ".",
     "environment": {
       "NODE_VERSION": "18"
